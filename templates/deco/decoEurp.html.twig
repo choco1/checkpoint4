@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('navbar') }}
+{% endblock %}
+
+
+
+{% block title %}DECORATION ORIENTAL{% endblock %}
+
+{% block body %}
+    <h1>Kmdldmdmdmdmdmdmdmdmdmdmdmdmd </h1>
+    {% for decoration in decorations %}
+        {% if(decoration.category == 2 ) %}
+            <div>
+                <img src="{{ decoration.picture }}" alt=" ">
+            </div>
+
+            <div>
+                <p> {{ decoration.client }}</p>
+            </div>
+
+            <div>
+                <p> {{ decoration.presentation }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

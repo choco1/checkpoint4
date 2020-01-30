@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('home') }}
+    {{ encore_entry_link_tags('navbar') }}
+{% endblock %}
+
+{% block body %}
+<main>
+
+
+
+<div class="example-wrapper">
+    <img src="https://d1cfnnhb7hbym9.cloudfront.net/dist/images/home_design.eb7d4643f05241d90fe789e19794d804.jpg" alt=" ">
+    <h1> Votre maison de réve</h1>
+    <h2>Est avec nous !</h2>
+</div>
+
+    <div>
+        <img class="image" src="https://i.pinimg.com/originals/22/5f/58/225f586955b66bfc971facbe104fcd9c.jpg" alt=" ">
+    </div>
+
+    <div class="pg-home">
+        <p>Votre chambre à coucher fait grise mine, et sa décoration ne vous convient plus ?</p>
+        <p>On est là pour donner un aspect reposant à votre chambre</p>
+    </div>
+
+    <div>
+        <img class="pic" src="https://www.atre-loisirs.fr/wp-content/uploads/2016/12/cuisine-artego-eco-pg-bleu-indigco-chene-fonce-atre-loisirs.jpg" alt=" ">
+    </div>
+
+    <div class="pg-home1">
+        <p>Un poil démodée ou trop rustique à votre goût, votre cuisine avait soif de modernité ?</p>
+        <p>On est là pour vous donner envie à preparer des plas en famille</p>
+    </div>
+</main>
+{% endblock %}
