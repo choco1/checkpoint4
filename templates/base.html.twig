@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
             {{ encore_entry_link_tags('navbar') }}
         {% endblock %}
     </head>
@@ -13,9 +12,22 @@
         <main>
             <nav>
                 <div>
-                    <a href="{{ path('home') }}">ACCEUIL</a>
-                    <a class="dropdown-item" href="{{ path('oriental') }}">REALISATION ORIENTAL</a>
-                    <a class="dropdown-item" href="{{ path('europe') }}">REALISATION EUROPEENNE</a>
+                    <a class="button" href="{{ path('home') }}">ACCEUIL</a>
+                    <a class="button" href="{{ path('oriental') }}">REALISATION ORIENTAL</a>
+                    <a class="button" href="{{ path('europe') }}">REALISATION EUROPEENNE</a>
+                </div>
+
+                <div class="formulaire">
+                    <a  href="{{ path('formulaire') }}"> Contact & Information Pratiques </a>
+                </div>
+
+                <div>
+                    {% if not app.user %}
+                    {% else %}
+                        <a class="logout" href="{{ path('home') }}">
+                            Sign out
+                        </a>
+                    {% endif %}
                 </div>
             </nav>
         </main>
